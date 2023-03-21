@@ -1,2 +1,2 @@
 def palindrome(l):
-	return l == l[::i]
+	return l == l[::-1]
