@@ -5,10 +5,14 @@ def merge(l1,l2):
 	i = 0
 	j = 0
 	while(i < size1 and j < size2)
-		if(l1[i] < l2[i])
+		if(l1[i] <= l2[i])
 			merged.append(l1[i])
-			i += 1
+			i = i + 1
 		else:
 			merged.append(l2[j])
-			j += 1
-	return merged = merged + l1[i:] + l2[j:]
+			j = j + 1
+	if(i<size1):
+		merged.extend(l1[i:])
+        if(j<size2):
+                merged.extend(l1[j:])
+	return merged
